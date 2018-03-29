@@ -46,11 +46,6 @@ module.exports = {
         loader: 'vue-loader',
         options: vueLoaderConfig
       },
-      /*{
-        test: /\.scss$/,
-        // loader: ['style','css','sass']
-        loader: 'style!css!sass!px2rem?remUnit=75&remPrecision=8'
-      },*/
       {
         test: /\.js$/,
         loader: 'babel-loader',
