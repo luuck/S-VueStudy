@@ -1,24 +1,30 @@
 <template lang="html">
-  <div>
+  <div class="hot-rank">
     <Heador/>
     <Nav/>
-    <!--<RecentMusic/>-->
+    <HotRankMusic/>
   </div>
 </template>
 
 <script>
   import Heador from '../public/header'
   import Nav from '../public/nav'
-  import Footer from '../public/footer'
+  import HotRankMusic from './hot-rank-music'
   export default {
     name: 'index',
     // 注册
     components: {
       Heador,
-      Nav
+      Nav,
+      HotRankMusic
     }
   }
 </script>
 
 <style lang="scss">
+  .hot-rank{
+    .recent-item{
+      margin-top: 0px; /*no*/
+    }
+  }
 </style>

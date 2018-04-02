@@ -2,19 +2,22 @@
   <div>
     <Heador/>
     <Nav/>
+    <HotSearch/>
   </div>
 </template>
 
 <script>
   import Heador from '../public/header'
   import Nav from '../public/nav'
-  import Footer from '../public/footer'
+  import HotSearch from './hot-search'
+
   export default {
     name: 'index',
     // 注册
     components: {
       Heador,
-      Nav
+      Nav,
+      HotSearch
     }
   }
 </script>
