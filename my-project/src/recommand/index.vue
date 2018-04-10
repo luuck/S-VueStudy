@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
     <Heador/>
-    <Nav></Nav>
+    <Nav/>
     <HotMusic/>
     <RecentMusic/>
     <Footer/>

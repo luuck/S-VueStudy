@@ -1,21 +1,11 @@
 <template lang="html">
   <div>
     <ul class="m-nav">
-      <li :class="classObject">
-        <div @click="showCurLi(1)">
-          <router-link to="/">推荐音乐</router-link>
-        </div>
-      </li>
-      <li :class="classObject">
-        <div @click="showCurLi(2)">
-          <router-link to="/hot-rank">热歌榜</router-link>
-        </div>
-      </li>
-      <li :class="classObject">
-        <div @click="showCurLi(3)">
-          <router-link to="/search">搜索</router-link>
-        </div>
-      </li>
+        <li v-for="(item, index) of tabs" :class="{'nav-li':true, cur:selected == index}">
+          <div>
+            <router-link :to=item.link>{{item.name}}</router-link>
+          </div>
+        </li>
     </ul>
   </div>
 </template>
@@ -24,11 +14,7 @@
   export default {
     data() {
       return {
-        classObject: {
-          'nav-li': true,
-          'cur': false
-        },
-        iscur: 1,
+        selected: 0, // 当前位置
         tabs: [{
           link: '/',
           name: '推荐音乐'
@@ -39,18 +25,6 @@
           link: '/search',
           name: '搜索'
         }]
-      }
-    },
-    methods: {
-      showCurLi: function (index) {
-        // this.iscur = index;
-        console.log('----');
-        console.log(index, this.iscur);
-      }
-    },
-    watch:{
-      $route(){
-        alert("改变");
       }
     }
   }
