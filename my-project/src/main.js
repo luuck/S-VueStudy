@@ -5,8 +5,8 @@ import App from './App'
 import router from './router'
 import api from './api/index'
 
-import './assets/css/reset.css'
-import './assets/css/common.css'
+// import './assets/css/reset.css'  edit by 91
+// import './assets/css/common.css' edit by 91
 
 Vue.config.productionTip = false
 Vue.prototype.$api = api
